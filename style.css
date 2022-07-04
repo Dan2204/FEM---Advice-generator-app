@@ -1,0 +1,130 @@
+:root {
+  --clr-primary: hsl(193, 38%, 86%);
+  --clr-secondary: hsl(150, 100%, 66%);
+
+  --clr-blue: hsl(217, 19%, 38%);
+  --clr-dark-blue: hsl(218, 23%, 16%);
+  --clr-gray-blue: hsl(217, 19%, 24%);
+}
+
+body {
+  margin-bottom: 2em;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-primary);
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.api-error {
+  padding-bottom: 1em;
+  font-size: 1rem;
+  color: rgba(255, 0, 0, 0.701);
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.card {
+  background-color: var(--clr-gray-blue);
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em 2em 2em;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card__head h3 {
+  color: var(--clr-secondary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2em;
+}
+
+.card__body h1 {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  margin-bottom: 1em;
+}
+
+.card__divider {
+  margin: 0 auto;
+}
+
+.card__mobile svg {
+  margin: 0 calc(-50vw + 50%);
+}
+
+.card__desktop svg {
+  margin: 0 calc(-50vw + 50%);
+}
+
+.card__mobile {
+  margin: 0 auto;
+}
+
+.card__desktop {
+  display: none;
+}
+
+.card__footer {
+  height: 0;
+}
+
+.card__advice-btn {
+  background-color: var(--clr-secondary);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transform: translateY(65%);
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.card__advice-btn:hover {
+  box-shadow: 0 0 15px hsl(150, 100%, 66%);
+}
+
+.card__advice-btn:hover > svg {
+  box-shadow: 0 0 15px rgba(157, 250, 204, 0.872);
+  transition: all 250ms ease-in-out;
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  padding: 0.75em 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #888;
+  background-color: #333;
+}
+
+.attribution a {
+  color: hsl(206deg, 31%, 49%);
+}
+@media (min-width: 400px) {
+  .attribution a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card__desktop {
+    display: block;
+  }
+
+  .card__mobile {
+    display: none;
+  }
+}
